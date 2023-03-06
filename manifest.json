@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Détection de choix multiples",
+  "version": "1.0",
+  "description": "Cette extension détecte les choix multiples sur une page Web et affiche une notification à l'utilisateur.",
+  "permissions": ["activeTab", "notifications"],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_icon": "icone.png"
+  },
+    "content_scripts": [
+    {
+      "js": ["scripts/content.js"],
+      "matches": [
+        "https://developer.chrome.com/docs/extensions/*",
+        "https://developer.chrome.com/docs/webstore/*"
+      ]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}

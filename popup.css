@@ -1,0 +1,19 @@
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #333;
+  text-align: center;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+Ce code applique une police de caractère et une taille de police par défaut pour le corps de la page, ainsi qu'un style pour le titre "h1". Vous pouvez personnaliser les propriétés CSS pour l'adapter à vos besoins.
+
+N'oubliez pas d'inclure ce fichier CSS dans votre fichier popup.html pour qu'il soit appliqué. J'espère que cela vous aide dans le développement de votre extension !
+
+
+
+
