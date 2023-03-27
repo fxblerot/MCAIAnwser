@@ -1,20 +1,32 @@
-const article = document.querySelector("article");
+  var article =  document.getElementsByTagName("*");
 
-// `document.querySelector` may return null if the selector doesn't match anything.
+
 if (article) {
-  const text = article.textContent;
-  const wordMatchRegExp = /[^\s]+/g; // Regular expression
-  const words = text.matchAll(wordMatchRegExp);
-  // matchAll returns an iterator, convert to array to get word count
-  const wordCount = [...words].length;
-  const readingTime = Math.round(wordCount / 200);
+
+for (var i = 0; i < article.length; i++) {
+     var article = article[i];
+
+        if (article.tagName.toLowerCase() == "select" || article.tagName.toLowerCase() == "input") {
+
+            if (article.type.toLowerCase() == "checkbox" || article.type.toLowerCase() == "radio" || article.tagName.toLowerCase() == "select") {
+
+                    if (article.multiple) {
+
+
+                    }
+            }
+        }
+    }  
+
+   
+
   const badge = document.createElement("p");
   // Use the same styling as the publish information in an article's header
   badge.classList.add("color-secondary-text", "type--caption");
-  badge.textContent = `?? ${readingTime} min read`;
-
+  badge.textContent = "Multi-Choice Detected";
+const article2 = document.getElementsByTagName('*')[0];
   // Support for API reference docs
-  const heading = article.querySelector("h1");
+  const heading = article2.querySelector("h1");
   // Support for article docs with date
   const date = article.querySelector("time")?.parentNode;
 
